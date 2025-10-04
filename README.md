@@ -1,33 +1,50 @@
-# Digital AI Strategy - Week 1
+# Digital AI Strategy - Week 4
 
 ## Course Overview
 
-Welcome to the **Digital AI Strategy** course! This repository contains materials and resources for Week 1, focusing on the **Foundations of IS, IT, Digital Platform, AI, and Business Strategy**.
+Welcome to the **Digital AI Strategy** course! This repository contains materials and resources for **Week 4**, focusing on **Industry Competition Analysis, Generative AI Strategy, and Digital Strategy**.
+
+### Core Topics This Week:
+
+- **Generative AI (GenAI) Adoption Levels** and their competitive implications.
+- The **Forces that Shape Industry Competition** (e.g., Porter's Five Forces).
+- Applying the **Porter Framework** to formulate **Digital, AI, and GenAI Strategy**.
+- Identifying strategic responses to technology-driven industry disruption.
 
 ### What's Included
 
-- **DAIS_Week1_RAG.py**: Interactive Streamlit application with RAG (Retrieval Augmented Generation) capabilities
-- **Course Materials**: Vector database and supporting resources
+- **DAIS_Week4_RAG.py**: Interactive Streamlit application with RAG (Retrieval Augmented Generation) capabilities (Note: Filename updated for clarity)
+- **Course Materials**: Vector database and supporting resources specific to Week 4 content.
 
 ## Getting Started
 
 1. Install dependencies: `pip install -r requirements.txt`
-2. Run the Streamlit app: `streamlit run DAIS_Week1_RAG.py`
+2. Run the Streamlit app: `streamlit run DAIS_Week4_RAG.py`
 3. Enter your API key for your preferred LLM provider
-4. Start asking questions about Digital AI Strategy concepts!
+4. Start asking questions about Industry Competition, Porter's, and GenAI Strategy concepts!
 
 ## 🗄️ Vector Database Implementation
 
-### Introduction to Vector Databases
+### Current Implementation Overview (Updated for Week 4)
 
-Vector databases are specialized storage systems designed to handle high-dimensional vector embeddings efficiently. In the context of this Digital AI Strategy course, vector databases serve several critical purposes:
+The application uses the following vector database setup:
 
-- **Semantic Search**: Enable finding conceptually similar content rather than just keyword matches
-- **Knowledge Retrieval**: Power the RAG (Retrieval Augmented Generation) system to provide contextually relevant answers
-- **Course Material Organization**: Store and index course content for intelligent querying and exploration
-- **Scalable Information Access**: Handle large volumes of educational content efficiently
+- **Embedding Model**: `all-MiniLM-L6-v2` (HuggingFace Sentence Transformers)
+- **Vector Store**: ChromaDB with local persistence
+- **Storage Location**: `./Week_4_Oct2025/` directory
+- **Retrieval Method**: Similarity search with top-k results (k=5)
 
-The implementation uses **ChromaDB**, a popular open-source vector database, combined with **HuggingFace embeddings** to create a sophisticated retrieval system for course materials.
+### Setting Up and Configuring the Vector Database
+
+#### Here we are Using the Pre-built Database
+
+The repository includes a pre-built vector database in the `Week_4_Oct2025` directory. To use it:
+
+1. Ensure the directory exists and contains the ChromaDB files
+2. Update the `PERSIST_DIRECTORY` variable in `DAIS_Week4_RAG.py`:
+   ```python
+   PERSIST_DIRECTORY = "./Week_4_Oct2025"
+
 
 ### How Vector Embeddings Work
 
@@ -109,18 +126,6 @@ for i, doc in enumerate(results):
     print(f"Result {i+1}: {doc.page_content[:100]}...")
 ```
 
-### Setting Up and Configuring the Vector Database
-
-#### Option 1: Using the Pre-built Database
-
-The repository includes a pre-built vector database in the `Week_1_31Aug2025` directory. To use it:
-
-1. Ensure the directory exists and contains the ChromaDB files
-2. Update the `PERSIST_DIRECTORY` variable in `DAIS_Week1_RAG.py`:
-   ```python
-   PERSIST_DIRECTORY = "./Week_1_31Aug2025"
-   ```
-3. Run the application - it will automatically load the existing database
 
 #### Option 2: Creating Your Own Database
 
@@ -451,130 +456,32 @@ python create_embeddings.py large_file.md  # GPU detection is automatic
 
 ## Sample Questions to Explore Course Concepts
 
-This collection of sample questions is designed to help you chat with this bot to understand Digital AI Strategy session content through relatable and creative analogies.
+Sample Questions to Explore Course Concepts
+This collection of sample questions is designed to help you chat with this bot to understand the Week 4 content on Industry Competition and GenAI Strategy through relatable, practical, and creative analogies.
 
-## 🦸‍♂️ Pop Culture & Marvel Universe
+🦸‍♂️ Pop Culture & Analogies
+GenAI and Competitive Dynamics
+"🌌 Thanos and GenAI Power: If a company gets a monopoly on a key GenAI model (like Thanos getting an Infinity Stone), which of Porter's Five Forces becomes instantly overwhelming for competitors, and why?"
 
-### Marvel-Inspired Questions
+"♟️ Grand Theft Strategy: Compare the Level of adoption of GenAI to different vehicles in Grand Theft Auto (bicycle, car, jet). How does upgrading your 'vehicle' affect your competitive escape speed and ability to navigate the 'city' (market)?"
 
-**"How are content in this session related to Digital Platform, AI, and Business Strategy ? Explain to a Marvel fan."**
-**"If the Digital Transformation was an Avenger, which one would it be and why?"**
+👶 Simple Explanations
+Explaining Core Concepts
+"🧒 Explain Porter's Rivalry to a 5-year-old: Use the analogy of kids sharing toys (or not sharing!). How does a new, amazing toy (like GenAI) change the 'sharing' behavior (rivalry) among the kids (companies)?"
 
+"💡 GenAI Adoption Levels for Dummies: Use the analogy of cooking a meal. Explain the difference between 'Level 1: Novice' and 'Level 4: Master Chef' GenAI adoption in terms of tools used (knife vs. advanced oven) and the quality of the final 'dish' (business outcome)."
 
-**"If IS Strategy making team would be a superhero team, what would be its superpowers?"**
+📝 Class Preparation: Cold Call Practice
+Prepare for Challenging Strategy Questions
+"🛑 Cold Call: Porter's on Digital Strategy: You are cold-called: 'Identify a core principle of digital strategy that either strengthens or weakens the Threat of New Entrants, and justify your answer using specific examples from platforms like Netflix or Airbnb.'"
 
-## 👶 Child-Friendly Explanations
+"🤯 Cold Call: GenAI and Supplier Power: You are cold-called: 'Discuss whether the rapid proliferation of open-source Generative AI models is likely to increase or decrease the Bargaining Power of Suppliers (e.g., cloud providers like AWS/Azure) in the long run. Why?'"
 
-### Simple Language Questions
+🎯 Application-Focused Questions
+Deepening the Core Topics
+"📈 Adoption Impact: What is the critical difference between Level 2 (Experimentation) and Level 3 (Integration) of GenAI adoption, and what organizational challenges must a company overcome to make that jump?"
 
-**"Explain the learnings from this course to a five year old"**
-- Use everyday objects and activities
-- Focus on "helping" and "making things better"
-- Think about toys, games, and familiar experiences
-- Break down cause-and-effect relationships
-
-**"How would you explain AI to someone who has never used a computer?"**
-- Compare to helpful assistants or smart helpers
-- Use analogies to human learning and memory
-- Focus on problem-solving capabilities
-
-## 🎮 Gaming & Interactive Analogies
-
-### Gaming-Inspired Questions
-
-**"How would you explain Digital and AI strategy content in this session to someone who loves video games?"**
-- Gaming consoles as platforms (PlayStation, Xbox, Nintendo)
-- Game ecosystems with developers, players, and content
-- App stores and digital marketplaces
-- Multiplayer networks and communities
-- Platform rules and developer tools
-
-**"Compare building an AI system to creating a video game character"**
-- Training = leveling up and gaining skills
-- Data = experience points and learning from gameplay
-- Algorithms = character abilities and behaviors
-- Testing = beta testing and balancing
-
-## 🧱 Building & Construction Analogies
-
-### LEGO & Construction Questions
-
-**"Compare AI Strategy to building a LEGO masterpiece"**
-- Planning: Having the right blueprint and vision
-- Components: Different LEGO pieces = different AI technologies
-- Foundation: Basic blocks that everything else builds upon
-- Integration: How pieces connect and work together
-- Iteration: Building, testing, and improving the design
-
-**"How is implementing AI in business like renovating a house?"**
-- Assessment: Understanding current capabilities and needs
-- Planning: Designing the renovation approach
-- Infrastructure: Upgrading foundational systems
-- Integration: Making new and old systems work together
-- Timeline: Phased implementation and testing
-
-## 🏙️ Ecosystem & Community Analogies
-
-### City Building Questions
-
-**"Compare developing a Digital Platform to creating a city"**
-- Infrastructure: Roads, utilities, and basic services
-- Zoning: Different areas for different purposes
-- Residents: Users who live and work in the ecosystem
-- Businesses: Third-party services and applications
-- Government: Platform rules and governance
-- Growth: Expansion and sustainable development
-
-**"How is Business Strategy like coaching a sports team?"**
-- Game plan: Overall strategy and tactics
-- Player development: Building capabilities and skills
-- Resource allocation: Putting the right players in the right positions
-- Adaptation: Adjusting strategy based on opponents and conditions
-- Performance measurement: Tracking progress and results
-
-## 🎵 Creative & Artistic Analogies
-
-### Orchestra & Music Questions
-
-**"How do IS, Digital Platform, AI, and Business Strategy work together like instruments in an orchestra?"**
-- Conductor: Business Strategy directing the overall performance
-- String section: Information Systems providing the foundation
-- Brass section: AI providing powerful, attention-grabbing capabilities
-- Woodwinds: Digital Platforms creating harmony and connection
-- Percussion: Implementation that drives the rhythm of change
-
-**"Compare AI development to composing a symphony"**
-- Composition: Designing the AI architecture
-- Musicians: Different algorithms and models
-- Practice: Training and optimization
-- Performance: Deployment and real-world application
-- Audience: End users and stakeholders
-
-## 🔍 Advanced Integration Questions
-
-### Cross-Concept Connections
-
-**"If you were building a digital company from scratch, how would you use concepts from this sessions topic?"**
-
-
-**"How do the four main course topics in this session relate to  'digital transformation '?"**
-
-**"Compare the evolution of digital business to the growth of a tree"**
-
-
-### Future-Thinking Questions
-
-**"If AI could be any kitchen appliance, what would it be and why?"**
-
-**"How is Digital Strategy like planning a space mission?"**
-
-## 🎯 Application-Focused Questions
-
-### Real-World Application
-
-**"How would you explain the value of Digital Platforms to a traditional brick-and-mortar store owner?"**
-
-**"If your favorite hobby became a digital business, how would you apply course concepts?"**
+"🔄 Industry Forces in FinTech: Apply the Threat of Substitutes force to the Financial Services industry. How does a GenAI-powered financial advisor (a substitute) change the competitive landscape for traditional human financial advisors?"
 
 
 ## How to Use These Questions
